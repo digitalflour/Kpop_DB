@@ -1,60 +1,121 @@
-/* Reset default margins */
-body, html {
+/* Reset */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
     font-family: 'Poppins', sans-serif;
     height: 100vh;
     width: 100vw;
-    overflow: hidden;
+    background: linear-gradient(to bottom right, #f8e1f4, #d0e6ff);
+    color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Background Image */
-body {
-
-  }
-  
-
-/* Text Container with Gradient */
+/* Main container */
 .container {
-    max-width: 80%;
-    padding: 30px;
-    background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 100%);
-    border-radius: 15px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 90%;
     text-align: center;
     backdrop-filter: blur(10px);
-    color: white;
 }
 
-/* Improve Heading Visibility */
+/* Heading */
 h1 {
-    font-size: 2.8rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-    letter-spacing: 1px;
-    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #ff4da6;
+    text-shadow: 1px 1px 6px rgba(255, 77, 166, 0.3);
+    padding: 12px 28px;
+
 }
 
 /* Paragraph */
 p {
-    font-size: 1.4rem;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    color: #444;
+    text-shadow: 1px 1px 6px rgba(33, 32, 32, 0.3);
+    padding: 12px 28px;
+    background-color: #c889a1;
+    border-radius: 10px;
+    border: 1px solid #ccc;
 }
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
+/* Inputs & textarea */
+input, textarea {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 1rem;
+    margin-bottom: 16px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #ff4da6;
+    box-shadow: 0 0 8px rgba(255, 77, 166, 0.3);
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+/* Button */
+button {
+    padding: 12px 28px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #ff4da6, #ff85b3);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(255, 77, 166, 0.3);
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 14px rgba(255, 77, 166, 0.5);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
     h1 {
         font-size: 2rem;
     }
-    p {
-        font-size: 1.1rem;
-    }
-    .container {
-        max-width: 90%;
-        padding: 20px;
+
+    button {
+        width: 100%;
     }
 }
+.button-center {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+
+
+  .home-intro {
+    padding: 20px 20px;
+    max-width: 700px;
+  }
+  
+  
